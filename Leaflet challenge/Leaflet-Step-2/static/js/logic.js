@@ -88,10 +88,10 @@ d3.json(earthquakeUrl, function(data) {
   });
 
   legend.onAdd = function() {
-    var div = L.DomUtil.create("div", "info legend"),
+    var div = L.DomUtil.create("div", "info legend");
 
-    grades = [0, 1, 2, 3, 4, 5],
-    colors = ["#2c99ea", "#2ceabf", "#92ea2c", "#d5ea2c","#eaa92c", "#ea2c2c"];
+    var grades = [0, 1, 2, 3, 4, 5];
+    var colors = ["#2c99ea", "#2ceabf", "#92ea2c", "#d5ea2c","#eaa92c", "#ea2c2c"];
 
 
   // Loop through our intervals to generate a label with a colored square for each interval
