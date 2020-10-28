@@ -50,7 +50,7 @@ d3.json(earthquakeUrl, function(data) {
         return "#2c99ea";
     }
   }
-
+// Create map radius
   function mapRadius(mag) {
     if (mag === 0) {
       return 1;
