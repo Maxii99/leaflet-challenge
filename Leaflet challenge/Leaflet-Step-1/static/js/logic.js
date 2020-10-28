@@ -19,7 +19,7 @@ function createFeatures(earthquakeData){
 
 // Create a GeoJSON layer containing the features array on the earthquakeData object
   // Run the onEachFeature function once for each piece of data in the array
-  var earthquakeLayer = new L.LayerGroup();
+  // var earthquakeLayer = new L.LayerGroup();
 
   var earthquakes = L.geoJSON(earthquakeData, {
     pointToLayer: function (feature, latlng) {
@@ -28,7 +28,8 @@ function createFeatures(earthquakeData){
     onEachFeature: function (feature, layer) {
       layer.bindPopup("Magnitude: " + feature.properties.mag + "<br> + Location: " + feature.properties.place);
     }
-  }).addTo(earthquakeLayer);
+  });
+  // addTo(earthquakeLayer);
 
 
   // Create map function and send earthquakes layer to the function
@@ -152,14 +153,14 @@ function styleInfo(feature)
   //Add legend to map
   legend.addTo(myMap);
 
-};
+
 
 // Pass in baseMaps and overlayMaps
 // Add the layer control to the map
 L.control.layers(baseMaps, overlayMaps, {
   collapsed: false
 }).addTo(myMap);
-
+};
 
 
 
